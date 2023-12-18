@@ -5,8 +5,6 @@ from langchain.vectorstores import FAISS
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.text_splitter import CharacterTextSplitter
 
-
-
 if __name__ == '__main__':
     response = requests.get('https://support.strikingly.com/api/v2/help_center/en-us/articles.json')
     articles = response.json().get('articles', [])
