@@ -34,7 +34,7 @@ To create a Faiss knowledge base from Zendesk content, follow these steps:
 ## File Details
 
 - **‘create_embedding_zendesk.py’:** Contains the script to fetch Zendesk content, clean and split text, generate embeddings, and build the Faiss store.
-- 
+
 ## Contributing
 
 Contributions to enhance or optimize this functionality are welcome! Fork this repository, make changes, and submit pull requests.
