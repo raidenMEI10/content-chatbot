@@ -53,8 +53,7 @@ With the embeddings set up, ask a question like this: `python ask_question.py "H
 With the embeddings set up, start a chatbot like this: `python start_chat_app.py`. Then when it's running, ask your questions and follow-ups.
 
 
-# LangChain Chatbot with Zendesk Content Embedding
-
+# Zendesk Content Embedding
 
 This repository includes an enhancement to the LangChain chatbot project, introducing the `create_embedding_zendesk` feature. This functionality utilizes the Zendesk API to retrieve website content and construct a Faiss knowledge base for improved chatbot responses.
 
@@ -62,7 +61,7 @@ This repository includes an enhancement to the LangChain chatbot project, introd
 
 The `create_embedding_zendesk` script performs the following steps:
 
-1. **Zendesk API Integration:** Retrieves articles from the [Strikingly Support Center](https://support.strikingly.com/api/v2/help_center/en-us/articles.json) using the Zendesk API.
+1. **Zendesk API Integration:** Retrieves articles using the Zendesk API.
 2. **Text Cleaning:** Parses HTML content, extracting and cleaning text for embedding.
 3. **Text Splitting:** Breaks down the content into smaller chunks for efficient embedding processing.
 4. **Embedding Creation:** Utilizes OpenAI Embeddings to create embeddings for the text chunks.
@@ -70,31 +69,14 @@ The `create_embedding_zendesk` script performs the following steps:
 
 ## Usage
 
-To create a Faiss knowledge base from Zendesk content, follow these steps:
-
-### Prerequisites
-
-- **Python Environment:** Ensure the required Python packages are installed. Check the `requirements.txt` file for necessary dependencies.
-- **Zendesk API Credentials:** Obtain and configure your Zendesk API credentials.
+- **Zendesk API Credentials:** To create a Faiss knowledge base from Zendesk content, please obtain and configure your Zendesk API credentials.
 
 ### Running the Script
 
-1. **Edit Configuration:** If necessary, modify the script to include your Zendesk API credentials.
-2. **Execute the Script:** Run the `create_embedding_zendesk.py` script to generate the Faiss store.
+1. **Execute the Script:** Run the `create_embedding_zendesk.py` script to generate the Faiss store.
 
    Example:
    ```bash
     python create_embeddings_zendesk.py "https://your.zendesk.api/"   #replace the link
     ```
-## File Details
-
-- **‘create_embedding_zendesk.py’:** Contains the script to fetch Zendesk content, clean and split text, generate embeddings, and build the Faiss store.
-
-## Contributing
-
-Contributions to enhance or optimize this functionality are welcome! Fork this repository, make changes, and submit pull requests.
-
-## Contact
-
-For inquiries or collaboration related to the feature of zendesk api, feel free to contact me at neverlandle@foxmail.com .
 
