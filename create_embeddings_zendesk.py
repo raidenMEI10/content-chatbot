@@ -1,5 +1,6 @@
 import pickle
 import requests
+import argparse
 
 from bs4 import BeautifulSoup
 from langchain.vectorstores import FAISS
@@ -14,7 +15,12 @@ def clean_html(html_content):
 
 
 if __name__ == '__main__':
-    response = requests.get('your zendesk website') #please insert your zendesk api
+    parser = argparse.ArgumentParser(description='Embedding website content')
+    parser.add_argument('zendesk', type=str,
+                        help='URL to your zendesk api')
+    args = parser.parse_args()
+    
+    response = requests.get(args.zendesk)
     articles = response.json().get('articles', [])
     pages = [{"text": clean_html(article['body']), "source": article['html_url']} for article in articles]
 
@@ -29,5 +35,5 @@ if __name__ == '__main__':
     store = FAISS.from_texts(docs,
                              OpenAIEmbeddings(),
                              metadatas=metadatas)
-    with open("faiss_store_new.pkl", "wb") as f:
+    with open("faiss_store_zendesk.pkl", "wb") as f:
         pickle.dump(store, f)
