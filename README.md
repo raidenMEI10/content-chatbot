@@ -73,10 +73,8 @@ The `create_embedding_zendesk` script performs the following steps:
 
 ### Running the Script
 
- **Execute the Script:** Run the `create_embedding_zendesk.py` script to generate the Faiss store.
+   **Execute the Script:** Run the `create_embedding_zendesk.py` script to generate the Faiss store.
 
    Example:
    ```bash
     python create_embeddings_zendesk.py "https://your.zendesk.api/"   #replace the link
-    ```
-
