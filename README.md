@@ -77,4 +77,4 @@ The `create_embedding_zendesk` script performs the following steps:
 
    Example:
    ```bash
-    python create_embeddings_zendesk.py "https://your.zendesk.api/"   #replace the link
+    python create_embeddings.py -m zendesk -z "https://your.zendesk.api/"   #replace the link
