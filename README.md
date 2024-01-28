@@ -53,13 +53,13 @@ With the embeddings set up, ask a question like this: `python ask_question.py "H
 With the embeddings set up, start a chatbot like this: `python start_chat_app.py`. Then when it's running, ask your questions and follow-ups.
 
 
-# Zendesk Content Embedding
+## Zendesk Content Embedding
 
 This repository includes an enhancement to the LangChain chatbot project, introducing the `create_embedding_zendesk` feature. This functionality utilizes the Zendesk API to retrieve website content and construct a Faiss knowledge base for improved chatbot responses.
 
-## How it Works
+### How it Works
 
-The `create_embedding_zendesk` script performs the following steps:
+The `create_embeddings` script performs the following steps:
 
 1. **Zendesk API Integration:** Retrieves articles using the Zendesk API.
 2. **Text Cleaning:** Parses HTML content, extracting and cleaning text for embedding.
@@ -67,13 +67,13 @@ The `create_embedding_zendesk` script performs the following steps:
 4. **Embedding Creation:** Utilizes OpenAI Embeddings to create embeddings for the text chunks.
 5. **Faiss Knowledge Base Construction:** Constructs a Faiss store with the generated embeddings, facilitating efficient similarity search.
 
-## Usage
+### Usage
 
 - **Zendesk API Credentials:** To create a Faiss knowledge base from Zendesk content, please obtain and configure your Zendesk API credentials.
 
 ### Running the Script
 
-   **Execute the Script:** Run the `create_embedding_zendesk.py` script to generate the Faiss store.
+   **Execute the Script:** Run the `create_embeddings.py` script to generate the Faiss store.
 
    Example:
    ```bash
