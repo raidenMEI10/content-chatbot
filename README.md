@@ -55,7 +55,7 @@ With the embeddings set up, start a chatbot like this: `python start_chat_app.py
 
 ## Zendesk Content Embedding
 
-This repository includes an enhancement to the LangChain chatbot project, introducing the `create_embedding_zendesk` feature. This functionality utilizes the Zendesk API to retrieve website content and construct a Faiss knowledge base for improved chatbot responses.
+This repository includes an enhancement to the LangChain chatbot project, introducing the `create_embeddings` for Zendesk feature. This functionality utilizes the Zendesk API to retrieve website content and construct a Faiss knowledge base for improved chatbot responses.
 
 ### How it Works
 
